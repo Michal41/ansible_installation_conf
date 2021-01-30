@@ -1,0 +1,12 @@
+[Unit]
+Description=My vouchershop app
+After=network-online.target
+
+[Service]
+Type=simple
+User=vouchershop
+ExecStart=/usr/bin/java -jar /opt/vouchershop/vouchershop.jar --server.port=8080
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
